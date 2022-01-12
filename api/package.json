@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "back-end part",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon -L ./src/server.js"
+  },
+  "author": "jaunebleu",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "apollo-server": "^3.5.0",
+    "boom": "^7.3.0",
+    "faker": "^5.5.3",
+    "graphql": "^15.8.0",
+    "localenv": "^0.2.2",
+    "luxon": "^2.2.0",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15"
+  }
+}

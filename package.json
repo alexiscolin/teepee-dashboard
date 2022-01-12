@@ -1,0 +1,30 @@
+{
+  "name": "teepee-dashboard",
+  "version": "1.0.0",
+  "description": "Property valuation dashboard with data scraping graphs and forecast.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "(cd api && npm install); (cd client && npm install); (cd database && npm install)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexiscolin/teepee-dashboard.git"
+  },
+  "keywords": [
+    "vuejs",
+    "graphql",
+    "real",
+    "estate",
+    "node",
+    "D3",
+    "simulator",
+    "loan",
+    "rentability"
+  ],
+  "author": "jaunebleu",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/alexiscolin/teepee-dashboard/issues"
+  },
+  "homepage": "https://github.com/alexiscolin/teepee-dashboard#readme"
+}

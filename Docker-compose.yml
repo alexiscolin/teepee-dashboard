@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  # SERVER
+  api:
+    build: ./api
+    container_name: api
+    expose: 
+      - ${APP_SERVER_PORT}
+    environment:
+      API_HOST: ${API_HOST}
+      APP_SERVER_PORT: ${APP_SERVER_PORT}
+    ports: 
+      - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
+    volumes:
+      - ./api/src:/usr/app/api/src
+    restart: on-failure
+    depends_on:
+      - database
+    command: npm start
+      
+
+  # APP
+  client:
+    build: ./app
+    container_name: app
+    expose: 
+      - ${APP_CLIENT_PORT}
+    environment:
+      APP_CLIENT_PORT: ${APP_CLIENT_PORT}
+    ports: 
+      - ${APP_CLIENT_PORT}:${APP_CLIENT_PORT}
+    volumes:
+      - ./app/src:/usr/app/app/src
+    depends_on:
+      - api
+    command: npm run dev
+
+
+  #########################
+  #  Fake database for test purpose -> use a dedicated one on scalingo instead    
+  #########################
+  database:
+    build: ./database
+    container_name: db
+    ports: 
+      - ${APP_DATABASE_PORT}:${APP_DATABASE_PORT}
+    # command: --auth
