@@ -8,4 +8,12 @@ module.exports = {
     // 'vue/no-unused-vars': 'error'
     "vue/require-default-prop": "off",
   },
+
+  // Allow JSX
+  parserOptions: {
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
 };

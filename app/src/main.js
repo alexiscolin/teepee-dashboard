@@ -1,22 +1,15 @@
-import { createApp } from 'vue'
-
-import './assets/index.css'
-
-import App from './App.vue'
-import router from '@/router'
-
-
-
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "@/router";
+import { loadPlugins, registerBaseComponents } from "@/helpers";
+import "./assets/index.css";
 
 const app = createApp(App);
 
+// Automatically import Plugins -> same title as plugin file name | need export default function
+loadPlugins(["test"]);
 
-// 5. Create and mount the root instance.
-// const app = Vue.createApp({})
-// Make sure to _use_ the router instance to make the
-// whole app router-aware.
-app.use(router)
+// Automatically register Base Component across all the app
+registerBaseComponents(app);
 
-app.mount('#app')
-
-// Now the app has started!
+app.use(router).mount("#app");
