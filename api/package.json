@@ -10,9 +10,12 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "apollo-server": "^3.5.0",
+    "apollo-server-express": "^3.6.1",
+    "bcryptjs": "^2.4.3",
     "boom": "^7.3.0",
     "faker": "^5.5.3",
     "graphql": "^15.8.0",
+    "jsonwebtoken": "^8.5.1",
     "localenv": "^0.2.2",
     "luxon": "^2.2.0",
     "mongoose": "^6.1.2",
