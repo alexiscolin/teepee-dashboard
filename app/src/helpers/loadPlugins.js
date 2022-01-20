@@ -17,6 +17,7 @@ const loadPlugins = (filenames) => {
   // Loop through plugins which we want to import
   for (const filename of filenames) {
     const filenameWithExt = `${filename}.js`;
+
     // Cheak if a plugin is registered in filemap list
     if (Object.prototype.hasOwnProperty.call(fileMap, filenameWithExt)) {
       pluginsList[`${PluginsRelPath + filenameWithExt}`]().then((mod) => {

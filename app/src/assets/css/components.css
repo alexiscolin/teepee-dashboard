@@ -1,0 +1,10 @@
+@layer components {
+    #app {
+        @apply flex;
+        @apply justify-center;
+        @apply min-h-screen;
+        @apply content-center;
+        @apply place-items-center;
+        @apply p-12;
+    }
+} 

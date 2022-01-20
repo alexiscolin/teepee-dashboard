@@ -21,6 +21,7 @@ const getUser = (token) => {
     }
     return null;
   } catch (error) {
+    console.log(error);
     return null;
   }
 };
@@ -30,7 +31,7 @@ const server = new ApolloServer({
   resolvers: resolvers,
   context: ({ req }) => {
     const token = req.get("Authorization") || "";
-    return { user: getUser(token.replace("Bearer", "")) };
+    return { user: getUser(token.replace("Bearer ", "")) };
   },
   playground: process.env.NODE_ENV !== "production",
   introspection: process.env.NODE_ENV !== "production",

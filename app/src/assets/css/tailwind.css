@@ -1,0 +1,17 @@
+@import "./fonts.css";
+
+/* Import fonts */
+@import "tailwindcss/base";
+@import "./base.css";
+
+/* Tailwind imports ITCSS */
+@import "tailwindcss/components";
+@import "./components.css";
+
+@import "tailwindcss/utilities";
+@import "./utilities.css";
+
+
+
+
+

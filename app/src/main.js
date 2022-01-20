@@ -1,15 +1,23 @@
-import { createApp } from "vue";
+import { createApp, h } from "vue";
 import App from "./App.vue";
 import router from "@/router";
+import store from "@/store";
 import { loadPlugins, registerBaseComponents } from "@/helpers";
-import "./assets/tailwind.css";
+import { apiSetup as apolloSetup } from "@/api/api";
+import "./assets/css/tailwind.css";
 
-const app = createApp(App);
+export const app = createApp({
+  setup() {
+    apolloSetup();
+  },
+
+  render: () => h(App),
+});
 
 // Automatically import Plugins -> need same title as plugin file name | need export default function
-loadPlugins(["test"]);
+loadPlugins(["setGlobalValidator"]);
 
 // Automatically register Base Component across all the app
 registerBaseComponents(app);
 
-app.use(router).mount("#app");
+app.use(store).use(router).mount("#app");

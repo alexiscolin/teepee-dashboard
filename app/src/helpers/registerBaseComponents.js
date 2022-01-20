@@ -6,7 +6,6 @@ export const registerBaseComponents = (vm) => {
     const requireComponent = import.meta.glob(
       "../components/base/**/Base*.vue" // Base component must start with "Base"
     );
-    console.log(requireComponent);
 
     // Loop over base component and register them
     for (let component in requireComponent) {

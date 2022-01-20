@@ -5,13 +5,13 @@ const jsonwebtoken = require("jsonwebtoken");
 const UserModel = require("../models/user");
 
 // GET THE CURRENT USER (ME)
-exports.getCurrentuser = async (_, __, { user }) => {
+exports.getCurrentuser = async (_, { id }, { user }) => {
   // check auth
   if (!user) throw new Error("You are not authenticated");
 
   // find me
   try {
-    const result = await UserModel.findById(user.id);
+    const result = await UserModel.findById(id);
     return result;
   } catch (error) {
     throw new Error(error);
@@ -35,6 +35,8 @@ exports.getSpecificuser = async (_, { id }, { user }) => {
 // POST - CREATE USER (eg - signin function)
 exports.createUser = async (_, { username, email, password }) => {
   try {
+    // TODO: check if email already saved
+
     // save data (including encrypted pswd)
     const user = await UserModel.create({
       username,
@@ -51,9 +53,7 @@ exports.createUser = async (_, { username, email, password }) => {
 
     return {
       token,
-      id: user.id,
-      username: user.username,
-      email: user.email,
+      user,
       message: "Authentication succesfull",
     };
   } catch (error) {

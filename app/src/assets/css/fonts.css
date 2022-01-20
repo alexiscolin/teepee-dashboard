@@ -1,0 +1,54 @@
+/****************************
+******** GEOMANIST **********
+*****************************/
+
+/******** GEOMANIST BLACK *********/
+@font-face {
+    font-family: geomanist;
+    font-weight: 900;
+    src: local("Geomanist black"), url('/fonts/geomanist/geomanist-black.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/geomanist/geomanist-black.woff2') format('woff2'),
+         url('/fonts/geomanist/geomanist-black.woff') format('woff'),
+         url('/fonts/geomanist/geomanist-black.ttf') format('truetype'),
+         url('/fonts/geomanist/geomanist-black.svg#geomanistregular') format('svg');
+    font-display: auto; 
+}
+
+
+/******** GEOMANIST BOLD *********/
+@font-face {
+    font-family: geomanist;
+    font-weight: 700;
+    src: local("Geomanist bold"), url('/fonts/geomanist/geomanist-bold.woff2') format('woff2'),
+         url('/fonts/geomanist/geomanist-bold.woff') format('woff'),
+         url('/fonts/geomanist/geomanist-bold.ttf') format('truetype'),
+         url('/fonts/geomanist/geomanist-bold.svg#geomanistregular') format('svg');
+    font-display: auto;
+}
+
+
+/******** GEOMANIST MEDIUM *********/
+@font-face {
+    font-family: geomanist;
+    font-weight: 500;
+    src: local("Geomanist"), url('/fonts/geomanist/geomanist-medium.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/geomanist/geomanist-medium.woff2') format('woff2'),
+         url('/fonts/geomanist/geomanist-medium.woff') format('woff'),
+         url('/fonts/geomanist/geomanist-medium.ttf') format('truetype'),
+         url('/fonts/geomanist/geomanist-medium.svg#geomanistregular') format('svg');
+    font-display: auto; 
+}
+
+
+/****************************
+******** CODEC PRO **********
+*****************************/
+
+/******** CODEC PRO REGULAR *********/
+@font-face {
+    font-family: "codec pro";
+    font-weight: 400;
+    src: local("Codec Pro"), url('/fonts/codec-pro/codec_pro_regular.woff2') format('woff2'),
+         url('/fonts/codec-pro/codec_pro_regular.woff') format('woff'); 
+    font-display: auto; 
+}

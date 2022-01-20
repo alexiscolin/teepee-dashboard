@@ -35,11 +35,32 @@ const routes = [
   },
 ];
 
-
-export default createRouter({
-  history: createWebHistory(),
-  routes,
-  scrollBehavior(to, from, savedPosition) {
-    return savedPosition || { top: 0 };
-  },
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+      return savedPosition || { top: 0 };
+    },
 });
+
+// router.beforeEach((to, from, next) => {
+//     // If there are no permissions to check then proceed
+
+
+//     if (!to.meta.permission) return next()
+  
+//     const { roles = [], config = {} } = to.meta.permission
+  
+//     // if (!roles.length) return next()
+  
+//     // const hasAccess = checkPermission(roles, config)
+//     // console.log('has access???', hasAccess)
+//     // if (hasAccess) {
+//     //   return next()
+//     // }
+//     // // No access!
+//     // next(to.meta.permission?.noAccessRedirect || '/forbidden')
+//   })
+
+
+export default router;

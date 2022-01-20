@@ -1,0 +1,7 @@
+/* Custom css */
+@layer base {
+    html {
+      @apply bg-gray-200;
+      @apply font-codec;
+    } 
+}
